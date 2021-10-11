@@ -1,0 +1,12 @@
+#include <unistd.h>
+#include <ctype.h>
+
+int main(){
+    char c, upper;
+    int n;
+    do{
+        n= read(STDIN_FILENO,&c,1);
+        upper = toupper(c);
+        write(STDOUT_FILENO,&upper,1);
+    }while(n!=0);
+}
